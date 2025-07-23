@@ -12,6 +12,8 @@
 }
 
 html {
+  --unb-green: #117e23; /* approximately... */
+  --unb-blue: #1a0dd1; /* approximately... */
   --solid-purple: #7c4dff;
   --solid-blue: #18a9e6;
   --solid-dark: #162542;
@@ -19,8 +21,8 @@ html {
 
   height: 100%;
 
-  background-color: var(--solid-purple);
-  background-image: linear-gradient(135deg, var(--solid-purple) 10%, var(--solid-blue) 90%);
+  background-color: var(--unb-green);
+  /* background-image: linear-gradient(135deg, var(--unb-green) 10%, var(--unb-blue) 90%); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   overscroll-behavior: none;
@@ -128,11 +130,11 @@ strong {
 }
 
 a {
-  color: var(--solid-purple);
+  color: var(--unb-green);
   font-weight: 500;
 }
 a:hover {
-  color: var(--solid-blue);
+  color: var(--unb-blue);
 }
 footer a {
   color: inherit;
@@ -156,7 +158,7 @@ ul > li {
   list-style-type: square;
 }
 ul > li::marker {
-  color: var(--solid-purple);
+  color: var(--unb-green);
 }
 ul ul, ol ul {
   margin-top: 0;
@@ -250,7 +252,7 @@ fieldset li p {
 }
 
 input {
-  border: 1px solid var(--solid-purple);
+  border: 1px solid var(--unb-green);
 }
 
 button {
@@ -258,11 +260,11 @@ button {
   padding: .5em 2em;
 
   border: 0px;
-  background-color: var(--solid-purple);
+  background-color: var(--unb-green);
   color: white;
 }
 button:hover {
-  background-color: var(--solid-blue);
+  background-color: var(--unb-blue);
 }
 button[type=submit] {
   font-weight: 600;
@@ -277,15 +279,15 @@ button.alternate {
   margin: .5em 0;
 
   background: none;
-  color: var(--solid-purple);
+  color: var(--unb-green);
   font-weight: normal;
 }
 button.alternate:hover {
-  color: var(--solid-blue);
+  color: var(--unb-blue);
 }
 
 input:focus, button:focus {
-  outline: var(--solid-blue) solid 1.5px;
+  outline: var(--unb-blue) solid 1.5px;
 }
 
 p.error {
@@ -357,7 +359,7 @@ ol.breadcrumbs > li > a {
   white-space: nowrap;
 }
 ol.breadcrumbs > li > a:hover {
-  color: var(--solid-purple);
+  color: var(--unb-green);
 }
 ol.breadcrumbs > li:not(:last-child):after {
   padding: 0 .25em;
@@ -367,7 +369,7 @@ ol.breadcrumbs > li:not(:last-child):after {
 }
 ol.breadcrumbs > li:last-child {
   font-weight: 500;
-  color: var(--solid-purple);
+  color: var(--unb-green);
 }
 ol.breadcrumbs > li:only-child {
   display: none;

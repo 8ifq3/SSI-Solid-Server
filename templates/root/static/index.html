@@ -1,85 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Community Solid Server</title>
+  <title>SSI Solid Server</title>
   <link rel="stylesheet" href="/.well-known/css/styles/main.css" type="text/css">
 </head>
 <body>
   <header>
     <a href=".."><img src="/.well-known/css/images/solid.svg" alt="[Solid logo]" /></a>
-    <h1>Community Solid Server</h1>
+    <h1>SSI Solid Server</h1>
   </header>
   <main>
-    <h1>Welcome to Solid</h1>
+    <h1>Bem vindo à Descentralização!</h1>
     <p>
-      This server implements
-      the <a href="https://solid.github.io/specification/protocol">Solid protocol</a>
-      so you can create your own <a href="https://solidproject.org/about">Solid Pod</a>
-      and identity.
+      Esse servidor implementa o protocolo 
+      <a href="https://solidproject.org/about">Solid</a> para incentivar
+      a Identidade Auto Soberana - <em>Self Sovereign Identity (SSI)</em>, promovendo 
+      a privacidade e segurança dos dados dos usuários, assim como a descentralização da 
+      Web.
     </p>
 
-    <h2 id="users">Getting started as a <em>user</em></h2>
+    <h2 id="users">Começando como <em>usuário</em></h2>
     <p id="registration-enabled">
-      <a id="registration-link" href="./.account/login/password/register/">Sign up for an account</a>
-      to get started with your own Pod and WebID.
+      <a id="registration-link" href="./.account/login/password/register/">
+      Crie uma conta</a> para começar a utilizar seu próprio Pod e WebID.
     </p>
     <p id="registration-disabled" class="hidden">
-      Registration is disabled on this server.
-      Make sure to update the permissions of the root container to prevent other people from modifying your server.
+      O registro está desabilitado neste servidor. Certifique-se de atualizar as 
+      permissões do contêiner raiz para impedir que outras pessoas modifiquem seu 
+      servidor.
     </p>
     <p>
-      To learn more about how this server can be used,
-      have a look at the
-      <a href="https://github.com/CommunitySolidServer/tutorials/blob/main/getting-started.md">getting started tutorial</a>
-      and the server <a href="https://communitysolidserver.github.io/CommunitySolidServer/">documentation</a>.
+      Para aprender como utilizar esse servidor, acesse a página do projeto no 
+      <a href="https://github.com/8ifq3/SSI-Solid-Server#">Github.</a>
     </p>
 
-    <h2 id="developers">Getting started as a <em>developer</em></h2>
+    <h2 id="developers">Começando como <em>desenvolvedor</em></h2>
     <p>
-      You can use any of the configurations in the <code>config</code> folder of the server
-      to set up an of this server with different features.
-      Besides the provided configurations,
-      you can also fine-tune your own custom configuration using the
-      <a href="https://communitysolidserver.github.io/configuration-generator/">configuration generator</a>.
+      Você pode usar qualquer uma das configurações na pasta <em>config</em> do 
+      servidor para configurar um servidor com diferentes recursos. Além das 
+      configurações fornecidas, você também pode ajustar sua própria configuração 
+      personalizada usando o 
+      <a href="https://communitysolidserver.github.io/configuration-generator/">
+      gerador de configurações</a>.
     </p>
     <p>
-      You can easily choose any folder on your disk
-      to expose as the root Pod.
+      Você pode facilmente escolher qualquer pasta no seu disco
+      para expor como Pod raiz.
       <br>
-      Use the <code>--help</code> switch to learn more.
+      Use <code>--help</code> na linha de comando para saber mais.
     </p>
 
-    <h2>Have a wonderful Solid experience</h2>
+    <h2>Bons Estudos!</h2>
     <p>
-      <strong>Learn more about Solid
-        at <a href="https://solidproject.org/">solidproject.org</a>.</strong>
+      <strong>Conheça também o projeto 
+      <a href="https://sol.sbc.org.br/index.php/weihc/article/view/22854">
+      SmartUnB.ECOS</a>.</strong>
     </p>
     <p>
-      You are warmly invited
-      to <a href="https://github.com/CommunitySolidServer/CommunitySolidServer/discussions">share your experiences</a>
-      and to <a href="https://github.com/CommunitySolidServer/CommunitySolidServer/issues">report any bugs</a> you encounter.
-    </p>
-
-    <h2>Replacing this page</h2>
-    <p>
-      This index page is a static page configured to be shown at the root of the server.
-      You can replace this page by adding the following entry to your server configuration:
-    <pre>{
-  "@type": "Override",
-  "overrideInstance": { "@id": "urn:solid-server:default:RootStaticAsset" },
-  "overrideParameters": {
-    "@type": "StaticAssetEntry",
-    "filePath": "/path/to/my/index.html"
-  }
-}</pre>
+      O projeto SmartUnB.ECOS proporciona um ecossistema educacional digital para 
+      atendimento à comunidade de campus universitário, provendo interoperabilidade de 
+      ferramentas de comunicação e de educação, fomentando a socialização e a 
+      aprendizagem; utilizando também a tecnologia Solid.
     </p>
   </main>
   <footer>
     <p>
-      ©2019–2025 <a href="https://inrupt.com/">Inrupt Inc.</a>
-      and <a href="https://www.imec-int.com/">imec</a>
+      Projeto Acadêmico da Universidade de Brasília (UnB)
     </p>
   </footer>
 </body>
