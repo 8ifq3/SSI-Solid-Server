@@ -1,4 +1,4 @@
-# Community Solid Server
+# SSI Solid Server
 
 <img src="https://raw.githubusercontent.com/CommunitySolidServer/CommunitySolidServer/main/templates/images/solid.svg"
  alt="[Solid logo]" height="150" align="right"/>
@@ -12,100 +12,58 @@
 [![GitHub discussions](https://img.shields.io/github/discussions/CommunitySolidServer/CommunitySolidServer)](https://github.com/CommunitySolidServer/CommunitySolidServer/discussions)
 [![Chat on Gitter](https://badges.gitter.im/CommunitySolidServer/community.svg)](https://gitter.im/CommunitySolidServer/community)
 
-**The Community Solid Server is open software
-that provides you with a [Solid](https://solidproject.org/) Pod and identity.
-This Pod acts as your own personal storage space
-so you can share data with people and Solid applications.**
+- **SSI significa Identidade Auto Soberana -> [*Self Sovereign Identity*](https://www.manning.com/books/self-sovereign-identity) -> SSI**
+- **SSI Solid Server, SSS, é baseado no [Community Solid Server, CSS,](https://github.com/CommunitySolidServer/CommunitySolidServer)**
+- **Este é um projeto da Universidade de Brasília, UnB, para ajudar a alcançar a SSI por meio do protocolo [Solid](https://solidproject.org/)**
+- **Todo o *software* é código aberto e pensado na sua segurança, privacidade e autonomia! 🙏​**
 
-As an open and modular implementation of the
-[Solid specifications](https://solidproject.org/TR/),
-the Community Solid Server is a great companion:
+O SSS provê hospedagem de Pods Solid e Identidade Web (WebID). Esses Pods atuam como seu próprio espaço de armazenamento pessoal para que você possa compartilhar dados com pessoas e aplicativos Solid. O projeto foi pensado para:
 
-- 🧑🏽 **for people** who want to try out having their own Pod
+- 👨🏿‍💻 **Desenvolvedores** dispostos a utilizarem e melhorarem o *software*.
+- 👨🏽‍🎓​ **Estudantes** principalmente no contexto da UnB, com o projeto [SmartUnB.ECOS](https://sol.sbc.org.br/index.php/weihc/article/view/22854).
+- 👩🏻‍🔬 **Pesquisadores** que gostariam de desenvolver novas funcionalidades.
+- 🧑🏽 **Qualquer pessoa** interessada em ter autonomia dos seus próprios dados.
 
-- 👨🏿‍💻 **for developers** who want to quickly create and test Solid apps
+O projeto ainda está em fase de desenvolvimento e adaptação, contribuições são bem-vindas para melhorar a experiência do usuário, tanto do experiente quanto do usuário normal da Web.
 
-- 👩🏻‍🔬 **for researchers** who want to design new features for Solid
+## ⚡ Executando o SSI Solid Server
 
-And, of course, for many others who like to experience Solid.
-
-## ⚡ Running the Community Solid Server
-
-Make sure you have [Node.js](https://nodejs.org/en/) 18.0 or higher.
-If this is your first time using Node.js,
-you can find instructions on how to do this [here](https://nodejs.org/en/download/package-manager).
+Certifique-se de possuir o [Node.js](https://nodejs.org/en/), versão 18.0 ou maior, instalado na sua máquina. Clone o repositório, acesse a pasta e instale as dependências.
 
 ```shell
-npx @solid/community-server
+npm i
 ```
 
-Now visit your brand new server at [http://localhost:3000/](http://localhost:3000/)!
-
-To persist your pod's contents between restarts, use:
+Inicie o servidor.
 
 ```shell
-npx @solid/community-server -c @css:config/file.json -f data/
+npx .
 ```
 
-In case you prefer to use Docker instead,
-you can find instructions for this and other methods in the
-[documentation](https://communitysolidserver.github.io/CommunitySolidServer/latest/usage/starting-server/).
+Agora visite o seu servidor local, através de um navegador, em [http://localhost:3000/](http://localhost:3000/).
 
-## 🔧 Configure your server
+Para persistir o conteúdo do seu pod entre reinicializações, use:
 
-Substantial changes to server behavior can be achieved via JSON configuration files.
-The Community Solid Server uses [Components.js](https://componentsjs.readthedocs.io/en/latest/)
-to specify how modules and components need to be wired together at runtime.
-
-Recipes for configuring the server can be found at [CommunitySolidServer/recipes](https://github.com/CommunitySolidServer/recipes).
-
-Examples and guidance on custom configurations
-are available in the [`config` folder](https://github.com/CommunitySolidServer/CommunitySolidServer/tree/main/config),
-and the [configurations tutorial](https://github.com/CommunitySolidServer/tutorials/blob/main/custom-configurations.md).
-There is also a [configuration generator](https://communitysolidserver.github.io/configuration-generator/).
-
-## 👩🏽‍💻 Developing server code
-
-The server allows writing and plugging in custom modules
-without altering its base source code.
-
-The [📗 API documentation](https://communitysolidserver.github.io/CommunitySolidServer/5.x/docs) and
-the [📓 user documentation](https://communitysolidserver.github.io/CommunitySolidServer/)
-can help you find your way.
-There is also a repository of [📚 comprehensive tutorials](https://github.com/CommunitySolidServer/tutorials/)
-
-## 📑 Cite
-
-If the Community Solid Server played a role in your scientific publication,
-we would appreciate a citation of our
-[article](https://journals.sagepub.com/doi/abs/10.3233/SW-243726).
-
-```bibtex
-@article{CommunitySolidServer,
-  title   = {The Community Solid Server: Supporting research \& development in an evolving ecosystem},
-  author  = {Van Herwegen, Joachim and Verborgh, Ruben},
-  journal = {Semantic Web},
-  volume  = {15},
-  number  = {6},
-  pages   = {2597--2611},
-  year    = {2024},
-  doi     = {10.3233/SW-243726},
-  url     = {https://journals.sagepub.com/doi/abs/10.3233/SW-243726}
-}
+```shell
+npx . @solid/community-server -c @css:config/file.json -f data/
 ```
 
-## 📜 License
+Caso prefira usar o Docker, você pode encontrar instruções para este e outros métodos na [documentação](https://communitysolidserver.github.io/CommunitySolidServer/latest/usage/starting-server/).
 
-The Community Solid Server code
-is copyrighted by [Inrupt Inc.](https://inrupt.com/)
-and [imec](https://www.imec-int.com/)
-and available under the [MIT License](https://github.com/CommunitySolidServer/CommunitySolidServer/blob/main/LICENSE.md).
+## 🔧 Configurando o servidor
 
-## 🎤 Feedback and questions
+Mudanças substanciais no comportamento do servidor podem ser alcançadas por meio de arquivos de configuração JSON, utilizando o [Components.js](https://componentsjs.readthedocs.io/en/latest/), para especificar como módulos e componentes precisam ser interligados em tempo de execução. o SSS também adiciona funcionalidades por meio desse módulos, permitindo que todas as opções de configurações possam ser habilitadas e selecionadas.
 
-Don't hesitate to [start a discussion](https://github.com/CommunitySolidServer/CommunitySolidServer/discussions)
-or [report a bug](https://github.com/CommunitySolidServer/CommunitySolidServer/issues).
+Receitas para configurar o servidor podem ser encontradas em [CommunitySolidServer/recipes](https://github.com/CommunitySolidServer/recipes).
 
-There's also [a Matrix-based, CSS-focused chat](https://matrix.to/#/#CommunitySolidServer_community:gitter.im)
+Exemplos e orientações sobre configurações personalizadas estão disponíveis na pasta `config` e no [tutorial de configurações](https://github.com/CommunitySolidServer/tutorials/blob/main/custom-configurations.md). Há também um [gerador de configurações](https://communitysolidserver.github.io/configuration-generator/).
 
-Learn more about Solid at [solidproject.org](https://solidproject.org/).
+## 👩🏽‍💻 Desenvolvendo código de servidor
+
+O servidor permite escrever e conectar módulos personalizados sem alterar seu código-fonte base.
+
+A [📗 documentação da API](https://communitysolidserver.github.io/CommunitySolidServer/5.x/docs) e a [📓 documentação do usuário](https://communitysolidserver.github.io/CommunitySolidServer/) estão disponpiveis para consulta. Há também um repositório de [📚 tutoriais abrangentes](https://github.com/CommunitySolidServer/tutorials/)
+
+## 📜 Licença
+
+O código do Community Solid Server é protegido por direitos autorais da [Inrupt Inc.](https://inrupt.com/) e da [imec](https://www.imec-int.com/) e está disponível sob a [Licença MIT](https://github.com/CommunitySolidServer/CommunitySolidServer/blob/main/LICENSE.md).
